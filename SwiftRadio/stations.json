@@ -2,32 +2,103 @@
     "station":
     [
      {
-     "name": "Sounds of the 80s",
+     "name": "Hala Bedi",
      "streamURL": "http://tuneinads.moodmedia.com/streams/tunein_sounds_of_the_80s_with_ads.mp3",
      "imageURL": "station-80s",
-     "desc": "Totally Rad",
-     "longDesc": "80s Baby! The '80s is not about nostalgia; it is about a decade of people, decisions and inventions that changed our future, told from the perspective of unknowing history makers who lived these iconic moments."
+     "desc": "Arabako irrati librea",
+     "longDesc": "30 urte uhinetan. Gasteiztik Araba osora. Goizero Suelta la olla magazina Euskal Herriko hainbat irrati libretan eskaintzen da. Badira luzaroan iraun duten irratsaioak. Gomendagarria Hiru Kortxea musika saioa."
      },
      {
-     "name": "Kill Rock Stars",
+     "name": "97 irratia",
+     "streamURL": "http://62.210.124.141:8000/radio.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Bilboko irrati librea",
+     "longDesc": "FMko 97an aspaldiko uhin libreak Bilbo handirako. Euskal Herriko irrati berriena da. Software librearekin murgilduta buru belarri. Gomendagarria #bidegorritik saioa."
+     },
+     {
+     "name": "Bilbo Hiria",
+     "streamURL": "http://groove.wavestreamer.com:7429/listen.m3u?sid=1",
+     "imageURL": "station-killrockstars",
+     "desc": "Bilboko irrati euskalduna",
+     "longDesc": "Kafe Antzokiaren azken solairutik, euskarazko irratia Zenbat Gara elkartearen eskutik. Gomendagarriak  Ibaizabal magazina eta Piperpolis."
+     },
+     {
+     "name": "Radixu",
+     "streamURL": "http://zuzenean.radixu.info:8000/radixu-live-128.m3u",
+     "imageURL": "station-killrockstars",
+     "desc": "Ondarruko irrati librea",
+     "longDesc": "Bizkaiko kostaldeko herri euskaldun honetako irratia. Aspalditik uhinetan eta bizi bizi."
+     },
+     {
+     "name": "Txapa irratia",
+     "streamURL": "http://zerb01.baibalab.net:8000/txapa.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Bergaran 30 urte",
+     "longDesc": "Bergarako kartzela zaharrean, gaur egun gaztetxea dena du estudio nagusia Txapa irrati libreak. Irratiak dagoeneko 30 urte bete ditu, eta gogotsu jarraitzen dute bertatik saioak egin eta emititzen."
+     },
+     {
+     "name": "Ttan Ttakun",
+     "streamURL": "http://media01.gurehosting.com:8000/ttanttakun.ogg",
+     "imageURL": "station-killrockstars",
+     "desc": "Donostialdeko irratia",
+     "longDesc": "Donostian sortutako irrati libre eta euskalduna. Irratia egiten onak dira eta festak antolatzen hobeak."
+     },
+     {
+     "name": "Zintzilik",
+     "streamURL": "http://irratia.zintzilik.net/zintzilik.ogg",
+     "imageURL": "station-killrockstars",
+     "desc": "Oreretako irrati librea",
+     "longDesc": "Punk eztandarekin batera sortutako irrati librea. Beti hor. Beti lehen lerroan."
+     },
+     {
+     "name": "Gure irratia",
+     "streamURL": "http://gureirratia.scdn.arkena.com/radiogureirratia.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Lapurdiko irrati euskalduna",
+     "longDesc": "Euskal irratietako aitzindaria. Uztaritzetik kostalde eta barrukaldeko etxeetara."
+     },
+     {
+     "name": "Info 7",
+     "streamURL": "http://stream.info7.com/info7.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Informazioan berezitutako irratia",
+     "longDesc": "Sarean sortu eta gaur egun FM bidez Euskal Herri osoan hedatuta dagoen irratia. Interneteko atari garrantzitsua dauka. Kolaboratzaile sare itzela."
+     },
+     {
+     "name": "Irulegiko irratia",
+     "streamURL": "http://irulegikoirratia.scdn.arkena.com/irulegiko.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Behe Nafarroa",
+     "longDesc": "Donibane Garaziko txokotik Behe Nafarroa osora hedatzen den irrati euskaldun eta bizia. Aspaldiko esatariak eta egungo kazetariak ezagunak dira etxe txoko guztietan."
+     },
+     {
+     "name": "Xiberoko Botza",
      "streamURL": "http://djboyradio.streamguys1.com/kill-rock-stars-records.mp3",
      "imageURL": "station-killrockstars",
-     "desc": "Alt Record Label",
-     "longDesc": "KRS was started in 1991 by Slim Moon, who ran the company until October 2006, when he left to become Senior Director of A&R at Nonesuch Records. We at KRS want to thank Slim for creating such an amazing record label and putting out albums that were important in all our lives. Slim rules!"
+     "desc": "Zuberoako euskal irratia",
+     "longDesc": "Mauletik zuzenean. Euskal irratiak federazioko partaide."
      },
      {
-     "name": "Spaceland Radio",
-     "streamURL": "http://rfcmedia.streamguys1.com/echo.aac",
-     "imageURL": "station-spaceland",
-     "desc": "Indie from L.A.",
-     "longDesc": "The Spaceland Radio station is the brainchild of club owner, LA music promoter, and industry icon Mitchell Frank, who has personally curated the station with songs new and old from artists who have performed at Spaceland venues."
+     "name": "euskalerria irratia",
+     "streamURL": "http://server4.beatproducciones.com:8014/;?hash=1445273402028.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Iruñerrian antena jarrita",
+     "longDesc": "Urte askoren ostean lizentzia eskuratu duen irrati euskalduna. Aldaketaren doinuak, Iruñerriko irrati euskalduna eta bizia."
      },
      {
-     "name": "Radio 1190",
-     "streamURL": "http://radio1190.colorado.edu:8000/high.mp3",
-     "imageURL": "",
-     "desc": "KVCU - Boulder, CO",
-     "longDesc": "Radio 1190 is the bomb."
+     "name": "Eguzki",
+     "streamURL": "http://46.105.24.175:9000/eguzki.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Iruñeko irrati librea",
+     "longDesc": "Historikoa. Aspaldikoena. Kañeroa. Bizi bizia. Irrati libre mitikoa da Eguzki. Beti hor. Iruñeko alde zaharrean, informazioa eta mobilizazioen erdian. Behin baino gehiagotan itxi nahi izan duten arren, beti eutsi izan dio Eguzkik."
+     },
+     {
+     "name": "Irati irratia",
+     "streamURL": "http://djboyradio.streamguys1.com/kill-rock-stars-records.mp3",
+     "imageURL": "station-killrockstars",
+     "desc": "Auñamendietatik zuzenean",
+     "longDesc": "Pirineotatik (Aezkoa, Auritz,  Agoitz eta Erro ibarra) zuzenean egunero."
      }
+     
     ]
 }
