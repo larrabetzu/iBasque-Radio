@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,7 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9409E1161ABF6FEA00312E2B /* SwiftRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9409E1161ABF6FEA00312E2B /* iBasqueRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBasqueRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9409E11A1ABF6FEA00312E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9409E11B1ABF6FEA00312E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9409E1231ABF6FEA00312E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 		94DB0A8F1B98B762005ED993 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DropShadow.swift"; sourceTree = "<group>"; };
 		94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftRadio/Libraries/SwiftyJSON.swift; sourceTree = SOURCE_ROOT; };
+		9FCE77B51BD8CDF600421507 /* eu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = eu; path = eu.lproj/Main.strings; sourceTree = "<group>"; };
 		B90086461BBE40AF00E5372C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -129,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B90086461BBE40AF00E5372C /* MediaPlayer.framework */,
-				9409E1181ABF6FEA00312E2B /* SwiftRadio */,
+				9409E1181ABF6FEA00312E2B /* iBasqueRadio */,
 				949BBB411ACCA2B6005B7C26 /* Libraries */,
 				9409E1171ABF6FEA00312E2B /* Products */,
 			);
@@ -138,12 +139,12 @@
 		9409E1171ABF6FEA00312E2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9409E1161ABF6FEA00312E2B /* SwiftRadio.app */,
+				9409E1161ABF6FEA00312E2B /* iBasqueRadio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9409E1181ABF6FEA00312E2B /* SwiftRadio */ = {
+		9409E1181ABF6FEA00312E2B /* iBasqueRadio */ = {
 			isa = PBXGroup;
 			children = (
 				94D2608E1B45D0F800DE671C /* ViewControllers */,
@@ -157,6 +158,7 @@
 				9409E1191ABF6FEA00312E2B /* Supporting Files */,
 				94D260941B45E0BA00DE671C /* UI Helpers */,
 			);
+			name = iBasqueRadio;
 			path = SwiftRadio;
 			sourceTree = "<group>";
 		};
@@ -277,9 +279,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9409E1151ABF6FEA00312E2B /* SwiftRadio */ = {
+		9409E1151ABF6FEA00312E2B /* iBasqueRadio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9409E1381ABF6FEA00312E2B /* Build configuration list for PBXNativeTarget "SwiftRadio" */;
+			buildConfigurationList = 9409E1381ABF6FEA00312E2B /* Build configuration list for PBXNativeTarget "iBasqueRadio" */;
 			buildPhases = (
 				9409E1121ABF6FEA00312E2B /* Sources */,
 				9409E1131ABF6FEA00312E2B /* Frameworks */,
@@ -289,9 +291,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftRadio;
+			name = iBasqueRadio;
 			productName = RadioPro;
-			productReference = 9409E1161ABF6FEA00312E2B /* SwiftRadio.app */;
+			productReference = 9409E1161ABF6FEA00312E2B /* iBasqueRadio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -303,11 +305,11 @@
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = CodeMarket.io;
+				ORGANIZATIONNAME = "Gorka Ercilla";
 				TargetAttributes = {
 					9409E1151ABF6FEA00312E2B = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = G24WJ3XCZ3;
+						DevelopmentTeam = T355TDU55C;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -316,12 +318,11 @@
 					};
 				};
 			};
-			buildConfigurationList = 9409E1111ABF6FE900312E2B /* Build configuration list for PBXProject "SwiftRadio" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 9409E1111ABF6FE900312E2B /* Build configuration list for PBXProject "iBasqueRadio" */;
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 9409E10D1ABF6FE900312E2B;
@@ -329,7 +330,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9409E1151ABF6FEA00312E2B /* SwiftRadio */,
+				9409E1151ABF6FEA00312E2B /* iBasqueRadio */,
 			);
 		};
 /* End PBXProject section */
@@ -408,6 +409,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9409E1231ABF6FEA00312E2B /* Base */,
+				9FCE77B51BD8CDF600421507 /* eu */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -450,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -486,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -506,10 +508,10 @@
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
 				INFOPLIST_FILE = SwiftRadio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthewfecher.SwiftRadio;
-				PRODUCT_NAME = SwiftRadio;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ercillagorka.iBasqueRadio;
+				PRODUCT_NAME = iBasqueRadio;
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 			};
@@ -528,10 +530,10 @@
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
 				INFOPLIST_FILE = SwiftRadio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthewfecher.SwiftRadio;
-				PRODUCT_NAME = SwiftRadio;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ercillagorka.iBasqueRadio;
+				PRODUCT_NAME = iBasqueRadio;
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 			};
@@ -540,7 +542,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9409E1111ABF6FE900312E2B /* Build configuration list for PBXProject "SwiftRadio" */ = {
+		9409E1111ABF6FE900312E2B /* Build configuration list for PBXProject "iBasqueRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9409E1361ABF6FEA00312E2B /* Debug */,
@@ -549,7 +551,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9409E1381ABF6FEA00312E2B /* Build configuration list for PBXNativeTarget "SwiftRadio" */ = {
+		9409E1381ABF6FEA00312E2B /* Build configuration list for PBXNativeTarget "iBasqueRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9409E1391ABF6FEA00312E2B /* Debug */,
