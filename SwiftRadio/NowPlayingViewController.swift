@@ -299,12 +299,12 @@ class NowPlayingViewController: UIViewController {
     }
     
     func updateAlbumArtwork() {
-        
+        track.artworkLoaded = false
         if track.artworkURL.rangeOfString("http") != nil {
             
             // Hide station description
             dispatch_async(dispatch_get_main_queue()) {
-                self.stationDescLabel.hidden = true
+                self.stationDescLabel.hidden = false
             }
             
             // Attempt to download album art from LastFM
@@ -324,6 +324,8 @@ class NowPlayingViewController: UIViewController {
                     self.albumImageView.animation = "wobble"
                     self.albumImageView.duration = 2
                     self.albumImageView.animate()
+                    
+                    self.stationDescLabel.hidden = true
                     
                     // Update lockscreen
                     self.updateLockScreen()
