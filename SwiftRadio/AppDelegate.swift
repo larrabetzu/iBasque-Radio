@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
         
         // Make status bar white
-        UINavigationBar.appearance().barStyle = .Black
+        UINavigationBar.appearance().barStyle = UIBarStyle.BlackOpaque
+        UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 75/255, green: 16/255, blue: 24/255, alpha: 1)
+        
         
         return true
     }
