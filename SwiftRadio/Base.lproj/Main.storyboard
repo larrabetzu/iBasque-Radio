@@ -55,7 +55,7 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.2627450980392157" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="stationDescLabel" destination="Ptr-mN-34N" id="mGP-95-uEF"/>
                                             <outlet property="stationImageView" destination="GQm-Mf-6pw" id="kCR-0m-tHf"/>
@@ -96,7 +96,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.070588235294117646" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="LhZ-Go-zL7" secondAttribute="trailing" constant="8" id="EHx-A6-uMp"/>
                                     <constraint firstAttribute="height" constant="44" id="FfH-MV-hND"/>
@@ -174,8 +174,10 @@
                                             <constraint firstAttribute="height" constant="16" id="Fwj-Pc-cZx"/>
                                             <constraint firstAttribute="width" constant="16" id="zOq-pb-kph"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.25490196078431371" green="0.56862745098039214" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="btn-close"/>
+                                        <color key="tintColor" red="0.2784801136363636" green="0.070559464258404606" blue="0.11481621504936702" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="btn-close">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.050980392156862744" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="closeButtonPressed" destination="61j-j7-6ve" eventType="touchUpInside" id="i59-HZ-ayG"/>
                                         </connections>
@@ -190,7 +192,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDa-S4-n0n" customClass="SpringButton" customModule="iBasqueRadio" customModuleProvider="target">
                                         <rect key="frame" x="124" y="103" width="86" height="32"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.25490196078431371" green="0.56862745098039214" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.39806312202911454" green="0.10700291678419396" blue="0.15897231321465458" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Website">
@@ -213,7 +215,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be5-hL-qtx" customClass="SpringButton" customModule="iBasqueRadio" customModuleProvider="target">
                                         <rect key="frame" x="38" y="103" width="86" height="32"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.30196078431372547" green="0.63529411764705879" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.51968954248366006" green="0.13969718316163859" blue="0.20754559804726236" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="About">
@@ -544,7 +546,7 @@
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Pop Records" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEm-3W-Db6">
-                                <rect key="frame" x="134" y="99" width="170" height="21"/>
+                                <rect key="frame" x="124" y="99" width="180" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LvN-NI-AcB"/>
@@ -554,7 +556,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mid-sized Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLU-OR-FSU">
-                                <rect key="frame" x="134" y="120" width="170" height="21"/>
+                                <rect key="frame" x="124" y="120" width="180" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5pu-sv-mbc"/>
@@ -564,7 +566,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-ka-9k5">
-                                <rect key="frame" x="16" y="162" width="288" height="235"/>
+                                <rect key="frame" x="16" y="180" width="288" height="235"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="340" id="ulU-kP-hZB"/>
@@ -577,7 +579,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-bZ-7Pz">
                                 <rect key="frame" x="16" y="512" width="288" height="36"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.41904940953654191" green="0.12538800610248191" blue="0.17617109245308774" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Gpj-99-oS5"/>
                                 </constraints>
@@ -590,11 +592,11 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stationImage" translatesAutoresizingMaskIntoConstraints="NO" id="AHg-sm-9St">
-                                <rect key="frame" x="16" y="84" width="110" height="70"/>
+                                <rect key="frame" x="16" y="72" width="100" height="100"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="BMD-rb-4Wt"/>
-                                    <constraint firstAttribute="width" constant="110" id="QL8-t8-yAt"/>
+                                    <constraint firstAttribute="height" constant="100" id="BMD-rb-4Wt"/>
+                                    <constraint firstAttribute="width" constant="100" id="QL8-t8-yAt"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -610,9 +612,9 @@
                             <constraint firstItem="AHg-sm-9St" firstAttribute="leading" secondItem="s9T-KA-lNI" secondAttribute="leadingMargin" id="Q1n-w7-ERb"/>
                             <constraint firstItem="fdb-DQ-3fT" firstAttribute="top" secondItem="s9T-KA-lNI" secondAttribute="top" id="SJ6-JW-zZf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IEm-3W-Db6" secondAttribute="trailing" id="TSC-dk-u9c"/>
-                            <constraint firstItem="AHg-sm-9St" firstAttribute="top" secondItem="uln-hJ-iAw" secondAttribute="bottom" constant="20" id="TWz-rT-lyP"/>
+                            <constraint firstItem="AHg-sm-9St" firstAttribute="top" secondItem="uln-hJ-iAw" secondAttribute="bottom" constant="8" symbolic="YES" id="TWz-rT-lyP"/>
                             <constraint firstItem="cJI-ka-9k5" firstAttribute="top" secondItem="AHg-sm-9St" secondAttribute="bottom" constant="8" id="VyM-yn-Ykr"/>
-                            <constraint firstItem="vLU-OR-FSU" firstAttribute="leading" secondItem="AHg-sm-9St" secondAttribute="trailing" constant="8" id="YpW-7t-gpE"/>
+                            <constraint firstItem="vLU-OR-FSU" firstAttribute="leading" secondItem="AHg-sm-9St" secondAttribute="trailing" constant="8" symbolic="YES" id="YpW-7t-gpE"/>
                             <constraint firstItem="IEm-3W-Db6" firstAttribute="leading" secondItem="vLU-OR-FSU" secondAttribute="leading" id="Ze4-77-21V"/>
                             <constraint firstItem="Btu-bZ-7Pz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cJI-ka-9k5" secondAttribute="bottom" constant="8" id="hUN-VG-lfJ"/>
                             <constraint firstItem="fdb-DQ-3fT" firstAttribute="leading" secondItem="s9T-KA-lNI" secondAttribute="leading" id="lWc-j3-nIR"/>
@@ -697,7 +699,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFQ-Uk-iUq">
                                 <rect key="frame" x="16" y="512" width="288" height="36"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.39208537581699332" green="0.10539604529800325" blue="0.15658501308419553" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="EYd-7e-NvX"/>
                                 </constraints>
