@@ -5,6 +5,7 @@
      "name": "97 irratia",
      "streamURL": "http://62.210.124.141:8000/radio.mp3",
      "imageURL": "97irratia",
+     "websiteURL": "http://97irratia.info",
      "desc": "Bilboko irrati librea",
      "longDesc": "FMko 97an aspaldiko uhin libreak Bilbo handirako. Euskal Herriko irrati berriena da. Software librearekin murgilduta buru belarri. Gomendagarria #bidegorritik saioa."
      },
@@ -12,6 +13,7 @@
      "name": "Bilbo Hiria",
      "streamURL": "http://groove.wavestreamer.com:7429/listen.m3u?sid=1",
      "imageURL": "bilbohiria",
+     "websiteURL": "http://bilbohiria.eus",
      "desc": "Bilboko irrati euskalduna",
      "longDesc": "Kafe Antzokiaren azken solairutik, euskarazko irratia Zenbat Gara elkartearen eskutik. Gomendagarriak  Ibaizabal magazina eta Piperpolis."
      },
@@ -19,6 +21,7 @@
      "name": "Eguzki",
      "streamURL": "http://46.105.24.175:9000/eguzki.mp3",
      "imageURL": "eguzki",
+     "websiteURL": "http://eguzki.eus",
      "desc": "Iruñeko irrati librea",
      "longDesc": "Historikoa. Aspaldikoena. Kañeroa. Bizi bizia. Irrati libre mitikoa da Eguzki. Beti hor. Iruñeko alde zaharrean, informazioa eta mobilizazioen erdian. Behin baino gehiagotan itxi nahi izan duten arren, beti eutsi izan dio Eguzkik."
      },
@@ -26,6 +29,7 @@
      "name": "Euskalerria irratia",
      "streamURL": "http://server4.beatproducciones.com:8014/;?hash=1445273402028.mp3",
      "imageURL": "euskalerria",
+     "websiteURL": "http://euskalerriairratia.eus",
      "desc": "Iruñerrian antena jarrita",
      "longDesc": "Urte askoren ostean lizentzia eskuratu duen irrati euskalduna. Aldaketaren doinuak, Iruñerriko irrati euskalduna eta bizia."
      },
@@ -33,6 +37,7 @@
      "name": "Gure irratia",
      "streamURL": "http://gureirratia.scdn.arkena.com/radiogureirratia.mp3",
      "imageURL": "gureirratia",
+     "websiteURL": "http://gureirratia.eu/",
      "desc": "Lapurdiko irrati euskalduna",
      "longDesc": "Euskal irratietako aitzindaria. Uztaritzetik kostalde eta barrukaldeko etxeetara."
      },
@@ -40,6 +45,7 @@
      "name": "Hala Bedi",
      "streamURL": "http://tuneinads.moodmedia.com/streams/tunein_sounds_of_the_80s_with_ads.mp3",
      "imageURL": "halabedi",
+     "websiteURL": "http://halabedi.org",
      "desc": "Arabako irrati librea",
      "longDesc": "30 urte uhinetan. Gasteiztik Araba osora. Goizero Suelta la olla magazina Euskal Herriko hainbat irrati libretan eskaintzen da. Badira luzaroan iraun duten irratsaioak. Gomendagarria Hiru Kortxea musika saioa."
      },
@@ -47,6 +53,7 @@
      "name": "Info 7",
      "streamURL": "http://stream.info7.com/info7.mp3",
      "imageURL": "info7",
+     "websiteURL": "http://info7.eus",
      "desc": "Informazioan berezitutako irratia",
      "longDesc": "Sarean sortu eta gaur egun FM bidez Euskal Herri osoan hedatuta dagoen irratia. Interneteko atari garrantzitsua dauka. Kolaboratzaile sare itzela."
      },
@@ -54,6 +61,7 @@
      "name": "Irati irratia",
      "streamURL": "http://djboyradio.streamguys1.com/kill-rock-stars-records.mp3",
      "imageURL": "irati",
+     "websiteURL": "http://iratiirratia.net",
      "desc": "Auñamendietatik zuzenean",
      "longDesc": "Pirineotatik (Aezkoa, Auritz,  Agoitz eta Erro ibarra) zuzenean egunero."
      },
@@ -61,6 +69,7 @@
      "name": "Irulegiko irratia",
      "streamURL": "http://irulegikoirratia.scdn.arkena.com/irulegiko.mp3",
      "imageURL": "irulegi",
+     "websiteURL": "http://irulegikoirratia.com",
      "desc": "Behe Nafarroa",
      "longDesc": "Donibane Garaziko txokotik Behe Nafarroa osora hedatzen den irrati euskaldun eta bizia. Aspaldiko esatariak eta egungo kazetariak ezagunak dira etxe txoko guztietan."
      },
@@ -68,6 +77,7 @@
      "name": "Radixu",
      "streamURL": "http://zuzenean.radixu.info:8000/radixu-live-128.m3u",
      "imageURL": "radixu",
+     "websiteURL": "http://radixu.info",
      "desc": "Ondarruko irrati librea",
      "longDesc": "Bizkaiko kostaldeko herri euskaldun honetako irratia. Aspalditik uhinetan eta bizi bizi."
      },
@@ -75,6 +85,7 @@
      "name": "Ttan Ttakun",
      "streamURL": "http://media01.gurehosting.com:8000/ttanttakun.ogg",
      "imageURL": "ttanttakun",
+     "websiteURL": "http://ttanttakun.org/",
      "desc": "Donostialdeko irratia",
      "longDesc": "Donostian sortutako irrati libre eta euskalduna. Irratia egiten onak dira eta festak antolatzen hobeak."
      },
@@ -82,6 +93,7 @@
      "name": "Txapa irratia",
      "streamURL": "http://zerb01.baibalab.net:8000/txapa.mp3",
      "imageURL": "txapa",
+     "websiteURL": "http://txapairratia.org/",
      "desc": "Bergaran 30 urte",
      "longDesc": "Bergarako kartzela zaharrean, gaur egun gaztetxea dena du estudio nagusia Txapa irrati libreak. Irratiak dagoeneko 30 urte bete ditu, eta gogotsu jarraitzen dute bertatik saioak egin eta emititzen."
      },
@@ -89,6 +101,7 @@
      "name": "Xiberoko Botza",
      "streamURL": "http://djboyradio.streamguys1.com/kill-rock-stars-records.mp3",
      "imageURL": "xiberokobotza",
+     "websiteURL": "http://xiberokobotza.org/",
      "desc": "Zuberoako euskal irratia",
      "longDesc": "Mauletik zuzenean. Euskal irratiak federazioko partaide."
      },
@@ -96,6 +109,7 @@
      "name": "Zintzilik",
      "streamURL": "http://irratia.zintzilik.net/zintzilik.ogg",
      "imageURL": "zintzilik",
+     "websiteURL": "http://zintzilik.net/",
      "desc": "Oreretako irrati librea",
      "longDesc": "Punk eztandarekin batera sortutako irrati librea. Beti hor. Beti lehen lerroan."
      }

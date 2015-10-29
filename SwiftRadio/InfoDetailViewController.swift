@@ -15,9 +15,11 @@ class InfoDetailViewController: UIViewController {
     @IBOutlet weak var stationDescLabel: UILabel!
     @IBOutlet weak var stationLongDescTextView: UITextView!
     @IBOutlet weak var okayButton: UIButton!
+    @IBOutlet weak var websiteButton: UIButton!
     
     var currentStation: RadioStation!
     var downloadTask: NSURLSessionDownloadTask?
+    var website: String?
 
     //*****************************************************************
     // MARK: - ViewDidLoad
@@ -45,6 +47,8 @@ class InfoDetailViewController: UIViewController {
         // Display Station Name & Short Desc
         stationNameLabel.text = currentStation.stationName
         stationDescLabel.text = currentStation.stationDesc
+        website = currentStation.stationWebsiteURL
+        websiteButton.setTitle(website!.substringFromIndex(website!.startIndex.advancedBy(7)), forState:.Normal)
         
         // Display Station Long Desc
         if currentStation.stationLongDesc == "" {
@@ -90,5 +94,13 @@ class InfoDetailViewController: UIViewController {
     @IBAction func okayButtonPressed(sender: UIButton) {
         navigationController?.popViewControllerAnimated(true)
     }
+    @IBAction func websiteButtonDidTouch(sender: UIButton) {
+        if let web = website{
+            if let url = NSURL(string: web) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+    }
+    
     
 }

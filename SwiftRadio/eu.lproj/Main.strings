@@ -2,8 +2,10 @@
 /* Class = "UIButton"; normalTitle = "email me"; ObjectID = "1G4-to-fqL"; */
 "1G4-to-fqL.normalTitle" = "email me";
 
-/* Class = "UITextView"; text = "FEATURES: + Displays Artist, Track and Album/Station Art on lock screen. \n+ Background Audio performance\n+Last FM API integration to automatically download album art\n+ Loads and parses Icecast metadata (i.e. artist & track names)\n+ Ability to update stations from server without resubmitting to the app store.\n"; ObjectID = "7AK-QT-5Xg"; */
-"7AK-QT-5Xg.text" = "FEATURES: + Displays Artist, Track and Album/Station Art on lock screen. \n+ Background Audio performance\n+Last FM API integration to automatically download album art\n+ Loads and parses Icecast metadata (i.e. artist & track names)\n+ Ability to update stations from server without resubmitting to the app store.\n";
+/* Class = "UITextView"; text = "FEATURES:
++ Displays Artist, Track and Album/Station Art on lock screen. \n+ Background Audio performance\n+Last FM API integration to automatically download album art\n+ Loads and parses Icecast metadata (i.e. artist & track names)\n+ Ability to update stations from server without resubmitting to the app store.\n"; ObjectID = "7AK-QT-5Xg"; */
+"7AK-QT-5Xg.text" = "FEATURES:
++ Displays Artist, Track and Album/Station Art on lock screen. \n+ Background Audio performance\n+Last FM API integration to automatically download album art\n+ Loads and parses Icecast metadata (i.e. artist & track names)\n+ Ability to update stations from server without resubmitting to the app store.\n";
 
 /* Class = "UIButton"; normalTitle = "About"; ObjectID = "Be5-hL-qtx"; */
 "Be5-hL-qtx.normalTitle" = "About";
@@ -24,7 +26,7 @@
 "KC8-ZG-rx5.text" = "Song Name";
 
 /* Class = "UIButton"; normalTitle = "Choose a station above to begin"; ObjectID = "LhZ-Go-zL7"; */
-"LhZ-Go-zL7.normalTitle" = "Choose a station above to begin";
+"LhZ-Go-zL7.normalTitle" = "Aukera nahi duzun irratia.";
 
 /* Class = "UINavigationItem"; title = "SubPop Records"; ObjectID = "M1Z-0o-hNV"; */
 "M1Z-0o-hNV.title" = "SubPop Records";
@@ -33,13 +35,13 @@
 "NDa-S4-n0n.normalTitle" = "Website";
 
 /* Class = "UINavigationItem"; title = "Swift Radio"; ObjectID = "OKR-cw-CyI"; */
-"OKR-cw-CyI.title" = "Swift Radio";
+"OKR-cw-CyI.title" = "iBasque Radio player;
 
 /* Class = "UILabel"; text = "Desc"; ObjectID = "Ptr-mN-34N"; */
 "Ptr-mN-34N.text" = "Desc";
 
 /* Class = "UIButton"; normalTitle = "matthewfecher.com"; ObjectID = "SBf-Hj-mZ8"; */
-"SBf-Hj-mZ8.normalTitle" = "matthewfecher.com";
+"SBf-Hj-mZ8.normalTitle" = "app.irratia.com";
 
 /* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."; ObjectID = "cJI-ka-9k5"; */
 "cJI-ka-9k5.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
@@ -55,9 +57,3 @@
 
 /* Class = "UILabel"; text = "Artist Name"; ObjectID = "v3l-q6-g0h"; */
 "v3l-q6-g0h.text" = "Artist Name";
-
-/* Class = "UILabel"; text = "Mid-sized Label"; ObjectID = "vLU-OR-FSU"; */
-"vLU-OR-FSU.text" = "Mid-sized Label";
-
-/* Class = "UILabel"; text = "Xcode 7/Swift 2"; ObjectID = "vTb-3H-cug"; */
-"vTb-3H-cug.text" = "Xcode 7/Swift 2";
