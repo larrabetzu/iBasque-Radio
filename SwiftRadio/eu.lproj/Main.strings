@@ -4,8 +4,8 @@
 
 /* Class = "UITextView"; text = "FEATURES:
 + Displays Artist, Track and Album/Station Art on lock screen. \n+ Background Audio performance\n+Last FM API integration to automatically download album art\n+ Loads and parses Icecast metadata (i.e. artist & track names)\n+ Ability to update stations from server without resubmitting to the app store.\n"; ObjectID = "7AK-QT-5Xg"; */
-"7AK-QT-5Xg.text" = "FEATURES:
-+ Displays Artist, Track and Album/Station Art on lock screen. \n+ Background Audio performance\n+Last FM API integration to automatically download album art\n+ Loads and parses Icecast metadata (i.e. artist & track names)\n+ Ability to update stations from server without resubmitting to the app store.\n";
+"7AK-QT-5Xg.text" = "EZAUGARRIAK:
++ Euskal Herriko irrati libre eta euskaldunak zuzenean entzuteko aplikazioa. \n+ Software librearekin garatutako tresna, sarean eskaintzen duguna. \n+Etengabeko hobekuntza eta garapenean jarraitzen dugu. \n+ Irrati gehiago gehituko ditugu apurka apurka. \n+ Irratiak mugikorretan ere entzun daitezkelako.\n";
 
 /* Class = "UIButton"; normalTitle = "About"; ObjectID = "Be5-hL-qtx"; */
 "Be5-hL-qtx.normalTitle" = "About";
@@ -32,7 +32,7 @@
 "M1Z-0o-hNV.title" = "SubPop Records";
 
 /* Class = "UIButton"; normalTitle = "Website"; ObjectID = "NDa-S4-n0n"; */
-"NDa-S4-n0n.normalTitle" = "Website";
+"NDa-S4-n0n.normalTitle" = "irratia.com";
 
 /* Class = "UINavigationItem"; title = "Swift Radio"; ObjectID = "OKR-cw-CyI"; */
 "OKR-cw-CyI.title" = "iBasque Radio player;
@@ -48,9 +48,6 @@
 
 /* Class = "UILabel"; text = "Station Name"; ObjectID = "hQQ-6f-sYl"; */
 "hQQ-6f-sYl.text" = "Station Name";
-
-/* Class = "UILabel"; text = "Created by: Matthew Fecher"; ObjectID = "hYi-2l-6dj"; */
-"hYi-2l-6dj.text" = "Created by: Matthew Fecher";
 
 /* Class = "UIButton"; normalTitle = "Okay"; ObjectID = "qFQ-Uk-iUq"; */
 "qFQ-Uk-iUq.normalTitle" = "Okay";
