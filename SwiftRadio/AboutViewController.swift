@@ -38,14 +38,6 @@ class AboutViewController: UIViewController {
             showSendMailErrorAlert()
         }
     }
-    
-    @IBAction func websiteButtonDidTouch(sender: UIButton) {
-        
-        // Use your own website here
-        if let url = NSURL(string: "http://app.irratia.com") {
-            UIApplication.sharedApplication().openURL(url)
-        }
-    }
 
   }
 
