@@ -533,7 +533,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ercillagorka.iBasqueRadio;
 				PRODUCT_NAME = iBasqueRadio;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8d36b4ee-9c78-4917-a265-67dae362de03";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 			};
 			name = Release;

@@ -13,7 +13,7 @@ import Foundation
 //**************************************
 
 // Display Comments
-let DEBUG_LOG = true
+let DEBUG_LOG = false
 
 //**************************************
 // STATION JSON
@@ -24,13 +24,3 @@ let DEBUG_LOG = true
 
 let useLocalStations = true
 let stationDataURL   = "http://yoururl.com/json/stations.json"
-
-//**************************************
-// LASTFM API
-//**************************************
-
-// USE YOUR OWN API KEY HERE!
-// Visit: http://www.last.fm/api
-
-let apiKey    = "9a267c245324cfa4f887366d497d3dd3"
-let apiSecret = "f1191864d7ae71e580b89238129768b8"

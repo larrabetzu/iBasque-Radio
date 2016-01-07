@@ -342,59 +342,6 @@ class NowPlayingViewController: UIViewController {
         self.view.setNeedsDisplay()
     }
 
-    // Call LastFM API to get album art url
-    
-    func queryAlbumArt() {
-        
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        
-        // Construct LastFM API Call URL
-        let queryURL = String(format: "http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=%@&artist=%@&track=%@&format=json", apiKey, track.artist, track.title)
-        
-        let escapedURL = queryURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        
-        // Query API
-        DataManager.getTrackDataWithSuccess(escapedURL!) { (data) in
-            
-            // Turn on network indicator in status bar
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            
-            if DEBUG_LOG {
-                print("LAST FM API SUCCESSFUL RETURN")
-                print("url: \(escapedURL!)")
-            }
-            
-            let json = JSON(data: data)
-            
-            // Get Largest Sized Image
-            if let imageArray = json["track"]["album"]["image"].array {
-                
-                let arrayCount = imageArray.count
-                let lastImage = imageArray[arrayCount - 1]
-                
-                if let artURL = lastImage["#text"].string {
-                    
-                    UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-                    
-                    // Check for Default Last FM Image
-                    if artURL.rangeOfString("/noimage/") != nil {
-                        self.resetAlbumArtwork()
-                        
-                    } else {
-                        // LastFM image found!
-                        self.track.artworkURL = artURL
-                        self.track.artworkLoaded = true
-                        self.updateAlbumArtwork()
-                    }
-                    
-                } else {
-                    self.resetAlbumArtwork()
-                }
-            } else {
-                self.resetAlbumArtwork()
-            }
-        }
-    }
     
     //*****************************************************************
     // MARK: - Segue
@@ -498,11 +445,6 @@ class NowPlayingViewController: UIViewController {
                     
                     // Update Stations Screen
                     self.delegate?.songMetaDataDidUpdate(self.track)
-                    
-                    // Query LastFM API for album art
-                    self.resetAlbumArtwork()
-                    self.queryAlbumArt()
-                    self.updateLockScreen()
                     
                 }
             }
