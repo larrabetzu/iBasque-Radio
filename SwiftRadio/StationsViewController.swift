@@ -69,11 +69,6 @@ class StationsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.title = "iBasque Radio"
         
-        // If a station has been selected, create "Now Playing" button to get back to current station
-        if !firstTime {
-            createNowPlayingBarButton()
-        }
-        
         // If a track is playing, display title & artist information and animation
         if currentTrack != nil && currentTrack!.isPlaying {
             let title = currentStation!.stationName + ": " + currentTrack!.title + " - " + currentTrack!.artist + "..."
@@ -104,13 +99,6 @@ class StationsViewController: UIViewController {
         nowPlayingAnimationImageView.animationDuration = 0.7
     }
     
-    func createNowPlayingBarButton() {
-        if self.navigationItem.rightBarButtonItem == nil {
-            let btn = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action:"nowPlayingBarButtonPressed")
-            btn.image = UIImage(named: "btn-nowPlaying")
-            self.navigationItem.rightBarButtonItem = btn
-        }
-    }
     
     //*****************************************************************
     // MARK: - Actions
