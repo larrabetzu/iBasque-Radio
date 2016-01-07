@@ -274,7 +274,7 @@ extension StationsViewController: UITableViewDelegate {
         if !stations.isEmpty {
             
             // Set Now Playing Buttons
-            let title = stations[indexPath.row].stationName + " - Now Playing..."
+            let title = stations[indexPath.row].stationName + " - Zuzenean..."
             stationNowPlayingButton.setTitle(title, forState: .Normal)
             stationNowPlayingButton.enabled = true
             

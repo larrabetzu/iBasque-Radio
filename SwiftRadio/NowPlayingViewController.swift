@@ -158,7 +158,7 @@ class NowPlayingViewController: UIViewController {
         radioPlayer.prepareToPlay()
         radioPlayer.play()
         
-        updateLabels("Loading Station...")
+        updateLabels("Irratiarekin konektatzen...")
         
         // songLabel animate
         songLabel.animation = "flash"
