@@ -19,7 +19,6 @@ class StationsViewController: UIViewController {
     var stations = [RadioStation]()
     var currentStation: RadioStation?
     var currentTrack: Track?
-    var refreshControl: UIRefreshControl!
     var firstTime = true
     
     //*****************************************************************
@@ -42,9 +41,6 @@ class StationsViewController: UIViewController {
         tableView.backgroundColor = UIColor.clearColor()
         tableView.backgroundView = nil
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        
-        // Setup Pull to Refresh
-        setupPullToRefresh()
         
         // Create NowPlaying Animation
         createNowPlayingAnimation()
@@ -85,15 +81,6 @@ class StationsViewController: UIViewController {
     // MARK: - Setup UI Elements
     //*****************************************************************
     
-    func setupPullToRefresh() {
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.backgroundColor = UIColor.blackColor()
-        self.refreshControl.tintColor = UIColor.whiteColor()
-        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl)
-    }
-    
     func createNowPlayingAnimation() {
         nowPlayingAnimationImageView.animationImages = AnimationFrames.createFrames()
         nowPlayingAnimationImageView.animationDuration = 0.7
@@ -110,19 +97,6 @@ class StationsViewController: UIViewController {
     
     @IBAction func nowPlayingPressed(sender: UIButton) {
         performSegueWithIdentifier("NowPlaying", sender: self)
-    }
-    
-    func refresh(sender: AnyObject) {
-        // Pull to Refresh
-        stations.removeAll(keepCapacity: false)
-        loadStationsFromJSON()
-        
-        // Wait 2 seconds then refresh screen
-        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)));
-        dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
-            self.refreshControl.endRefreshing()
-            self.view.setNeedsDisplay()
-        }
     }
     
     //*****************************************************************
