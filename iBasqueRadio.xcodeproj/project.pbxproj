@@ -56,7 +56,19 @@
 		94DB0AAC1B98B762005ED993 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB0A8F1B98B762005ED993 /* UnwindSegue.swift */; };
 		94E9761C1B1A8F3200F52B1E /* UIImage+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */; };
 		94ECF2671B94D80600D120A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */; };
+		9FACCB8D1C3E9DAD00567EDA /* iBasqueRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCB8C1C3E9DAD00567EDA /* iBasqueRadioUITests.swift */; };
+		9FACCB951C3E9E0100567EDA /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCB941C3E9E0100567EDA /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FACCB8F1C3E9DAD00567EDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9409E10E1ABF6FE900312E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9409E1151ABF6FEA00312E2B;
+			remoteInfo = iBasqueRadio;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9409E1161ABF6FEA00312E2B /* iBasqueRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBasqueRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,11 +123,22 @@
 		94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DropShadow.swift"; sourceTree = "<group>"; };
 		94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftRadio/Libraries/SwiftyJSON.swift; sourceTree = SOURCE_ROOT; };
 		9F2E57F31BE247B10029DAE2 /* eu */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = eu; path = eu.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FACCB8A1C3E9DAD00567EDA /* iBasqueRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBasqueRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACCB8C1C3E9DAD00567EDA /* iBasqueRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBasqueRadioUITests.swift; sourceTree = "<group>"; };
+		9FACCB8E1C3E9DAD00567EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FACCB941C3E9E0100567EDA /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		B90086461BBE40AF00E5372C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9409E1131ABF6FEA00312E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCB871C3E9DAD00567EDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,6 +154,7 @@
 				B90086461BBE40AF00E5372C /* MediaPlayer.framework */,
 				9409E1181ABF6FEA00312E2B /* iBasqueRadio */,
 				949BBB411ACCA2B6005B7C26 /* Libraries */,
+				9FACCB8B1C3E9DAD00567EDA /* iBasqueRadioUITests */,
 				9409E1171ABF6FEA00312E2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				9409E1161ABF6FEA00312E2B /* iBasqueRadio.app */,
+				9FACCB8A1C3E9DAD00567EDA /* iBasqueRadioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,6 +300,16 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		9FACCB8B1C3E9DAD00567EDA /* iBasqueRadioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9FACCB941C3E9E0100567EDA /* SnapshotHelper.swift */,
+				9FACCB8C1C3E9DAD00567EDA /* iBasqueRadioUITests.swift */,
+				9FACCB8E1C3E9DAD00567EDA /* Info.plist */,
+			);
+			path = iBasqueRadioUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,6 +330,24 @@
 			productReference = 9409E1161ABF6FEA00312E2B /* iBasqueRadio.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9FACCB891C3E9DAD00567EDA /* iBasqueRadioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FACCB931C3E9DAD00567EDA /* Build configuration list for PBXNativeTarget "iBasqueRadioUITests" */;
+			buildPhases = (
+				9FACCB861C3E9DAD00567EDA /* Sources */,
+				9FACCB871C3E9DAD00567EDA /* Frameworks */,
+				9FACCB881C3E9DAD00567EDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FACCB901C3E9DAD00567EDA /* PBXTargetDependency */,
+			);
+			name = iBasqueRadioUITests;
+			productName = iBasqueRadioUITests;
+			productReference = 9FACCB8A1C3E9DAD00567EDA /* iBasqueRadioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -302,7 +355,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Gorka Ercilla";
 				TargetAttributes = {
@@ -314,6 +367,10 @@
 								enabled = 1;
 							};
 						};
+					};
+					9FACCB891C3E9DAD00567EDA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9409E1151ABF6FEA00312E2B;
 					};
 				};
 			};
@@ -331,6 +388,7 @@
 			projectRoot = "";
 			targets = (
 				9409E1151ABF6FEA00312E2B /* iBasqueRadio */,
+				9FACCB891C3E9DAD00567EDA /* iBasqueRadioUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -346,6 +404,13 @@
 				94DB0A9F1B98B762005ED993 /* LoadingView.xib in Resources */,
 				94DB0A9C1B98B762005ED993 /* Info.plist in Resources */,
 				9409E1261ABF6FEA00312E2B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCB881C3E9DAD00567EDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +467,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FACCB861C3E9DAD00567EDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACCB8D1C3E9DAD00567EDA /* iBasqueRadioUITests.swift in Sources */,
+				9FACCB951C3E9E0100567EDA /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FACCB901C3E9DAD00567EDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9409E1151ABF6FEA00312E2B /* iBasqueRadio */;
+			targetProxy = 9FACCB8F1C3E9DAD00567EDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9409E1221ABF6FEA00312E2B /* Main.storyboard */ = {
@@ -538,6 +620,38 @@
 			};
 			name = Release;
 		};
+		9FACCB911C3E9DAD00567EDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = iBasqueRadioUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ercillagorka.iBasqueRadioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8d36b4ee-9c78-4917-a265-67dae362de03";
+				TEST_TARGET_NAME = iBasqueRadio;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9FACCB921C3E9DAD00567EDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = iBasqueRadioUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ercillagorka.iBasqueRadioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8d36b4ee-9c78-4917-a265-67dae362de03";
+				TEST_TARGET_NAME = iBasqueRadio;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,6 +669,15 @@
 			buildConfigurations = (
 				9409E1391ABF6FEA00312E2B /* Debug */,
 				9409E13A1ABF6FEA00312E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FACCB931C3E9DAD00567EDA /* Build configuration list for PBXNativeTarget "iBasqueRadioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACCB911C3E9DAD00567EDA /* Debug */,
+				9FACCB921C3E9DAD00567EDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
