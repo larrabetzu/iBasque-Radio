@@ -290,45 +290,13 @@ class NowPlayingViewController: UIViewController {
     
     func updateAlbumArtwork() {
         track.artworkLoaded = false
-        if track.artworkURL.rangeOfString("http") != nil {
-            
-            // Attempt to download album art from LastFM
-            if let url = NSURL(string: track.artworkURL) {
-                
-                self.downloadTask = self.albumImageView.loadImageWithURL(url) {
-                    (image) in
-                    
-                    // Update track struct
-                    self.track.artworkImage = image
-                    self.track.artworkLoaded = true
-                    
-                    // Turn off network activity indicator
-                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-                        
-                    // Animate artwork
-                    self.albumImageView.animation = "wobble"
-                    self.albumImageView.duration = 2
-                    self.albumImageView.animate()
-                    
-                    // Update lockscreen
-                    self.updateLockScreen()
-                    
-                    // Call delegate function that artwork updated
-                    self.delegate?.artworkDidUpdate(self.track)
-                }
-            }
-            
-            // Hide the station description to make room for album art
-            if track.artworkLoaded && !self.justBecameActive {
-                self.justBecameActive = false
-            }
-            
-        } else if track.artworkURL != "" {
+        if track.artworkURL != "" {
             // Local artwork
             self.albumImageView.image = UIImage(named: track.artworkURL)
             track.artworkImage = albumImageView.image
             track.artworkLoaded = true
             
+            self.updateLockScreen()
             // Call delegate function that artwork updated
             self.delegate?.artworkDidUpdate(self.track)
             
