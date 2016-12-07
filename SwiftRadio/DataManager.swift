@@ -11,20 +11,20 @@ import UIKit
 class DataManager {
     
     //*****************************************************************
-    // Helper Class to get either local or remote JSON
+    // Helper class to get either local or remote JSON
     //*****************************************************************
     
-    class func getStationDataWithSuccess(success: ((metaData: NSData!) -> Void)) {
+    class func getStationDataWithSuccess(success: @escaping ((_ metaData: Data?) -> Void)) {
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        DispatchQueue.global(qos: .userInitiated).async {
             if useLocalStations {
                 getDataFromFileWithSuccess() { data in
-                    success(metaData: data)
+                    success(data)
                 }
             } else {
-                loadDataFromURL(NSURL(string: stationDataURL)!) { data, error in
+                loadDataFromURL(url: URL(string: stationDataURL)!) { data, error in
                     if let urlData = data {
-                        success(metaData: urlData)
+                        success(urlData)
                     }
                 }
             }
@@ -35,33 +35,31 @@ class DataManager {
     // Load local JSON Data
     //*****************************************************************
     
-    class func getDataFromFileWithSuccess(success: (data: NSData) -> Void) {
+    class func getDataFromFileWithSuccess(success: (_ data: Data) -> Void) {
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            
-            let filePath = NSBundle.mainBundle().pathForResource("stations", ofType:"json")
+        if let filePath = Bundle.main.path(forResource: "stations", ofType:"json") {
             do {
-                let data = try NSData(contentsOfFile:filePath!,
-                    options: NSDataReadingOptions.DataReadingUncached)
-                success(data: data)
+                let data = try NSData(contentsOfFile:filePath,
+                                      options: NSData.ReadingOptions.uncached) as Data
+                success(data)
             } catch {
                 fatalError()
             }
+        } else {
+            print("The local JSON file could not be found")
         }
     }
     
     //*****************************************************************
-    // Get LastFM Data
+    // Get LastFM/iTunes Data
     //*****************************************************************
     
-    class func getTrackDataWithSuccess(queryURL: String, success: ((metaData: NSData!) -> Void)) {
-
-        loadDataFromURL(NSURL(string: queryURL)!) { data, _ in
+    class func getTrackDataWithSuccess(queryURL: String, success: @escaping ((_ metaData: Data?) -> Void)) {
+        
+        loadDataFromURL(url: URL(string: queryURL)!) { data, _ in
             // Return Data
             if let urlData = data {
-                success(metaData: urlData)
-            } else {
-                if DEBUG_LOG { print("LAST FM TIMEOUT OR ERROR") }
+                success(urlData)
             }
         }
     }
@@ -70,38 +68,34 @@ class DataManager {
     // REUSABLE DATA/API CALL METHOD
     //*****************************************************************
     
-    class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
+    class func loadDataFromURL(url: URL, completion:@escaping (_ data: Data?, _ error: Error?) -> Void) {
         
-        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let sessionConfig = URLSessionConfiguration.default
         sessionConfig.allowsCellularAccess          = true
         sessionConfig.timeoutIntervalForRequest     = 15
         sessionConfig.timeoutIntervalForResource    = 30
-        sessionConfig.HTTPMaximumConnectionsPerHost = 1
+        sessionConfig.httpMaximumConnectionsPerHost = 1
         
-        let session = NSURLSession(configuration: sessionConfig)
+        let session = URLSession(configuration: sessionConfig)
         
         // Use NSURLSession to get data from an NSURL
-        let loadDataTask = session.dataTaskWithURL(url){ data, response, error in
+        let loadDataTask = session.dataTask(with: url){ data, response, error in
             if let responseError = error {
-                completion(data: nil, error: responseError)
-                
-                if DEBUG_LOG { print("API ERROR: \(error)") }
+                completion(nil, responseError)
                 
                 // Stop activity Indicator
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 
-            } else if let httpResponse = response as? NSHTTPURLResponse {
+            } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode != 200 {
-                    let statusError = NSError(domain:"io.codemarket", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
+                    let statusError = NSError(domain:"com.matthewfecher", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
                     
-                    if DEBUG_LOG { print("API: HTTP status code has unexpected value") }
-                    
-                    completion(data: nil, error: statusError)
+                    completion(nil, statusError)
                     
                 } else {
                     
                     // Success, return data
-                    completion(data: data, error: nil)
+                    completion(data, nil)
                 }
             }
         }

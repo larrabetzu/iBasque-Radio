@@ -31,11 +31,9 @@ class NowPlayingViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var songLabel: SpringLabel!
-    @IBOutlet weak var volumeParentView: UIView!
-    @IBOutlet weak var slider = UISlider()
     
     var currentStation: RadioStation!
-    var downloadTask: NSURLSessionDownloadTask?
+    var downloadTask: URLSessionDownloadTask?
     var iPhone4 = false
     var justBecameActive = false
     var newStation = true
@@ -72,16 +70,16 @@ class NowPlayingViewController: UIViewController {
         setupPlayer()
         
         // Notification for when app becomes active
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "didBecomeActiveNotificationReceived",
-            name:"UIApplicationDidBecomeActiveNotification",
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(NowPlayingViewController.didBecomeActiveNotificationReceived),
+            name:NSNotification.Name(rawValue: "UIApplicationDidBecomeActiveNotification"),
             object: nil)
         
         // Notification for MediaPlayer metadata updated
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: Selector("metadataUpdated:"),
-            name:MPMoviePlayerTimedMetadataUpdatedNotification,
-            object: nil);
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(NowPlayingViewController.didBecomeActiveNotificationReceived),
+                                               name: Notification.Name("UIApplicationDidBecomeActiveNotification"),
+                                               object: nil)
         
         // Check for station change
         if newStation {
@@ -98,8 +96,7 @@ class NowPlayingViewController: UIViewController {
             }
         }
         
-        // Setup slider
-        setupVolumeSlider()
+
     }
     
     func didBecomeActiveNotificationReceived() {
@@ -111,12 +108,15 @@ class NowPlayingViewController: UIViewController {
     
     deinit {
         // Be a good citizen
-        NSNotificationCenter.defaultCenter().removeObserver(self,
-            name:"UIApplicationDidBecomeActiveNotification",
-            object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self,
-            name: MPMoviePlayerTimedMetadataUpdatedNotification,
-            object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: Notification.Name("UIApplicationDidBecomeActiveNotification"),
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: Notification.Name.MPMoviePlayerTimedMetadataUpdated,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: Notification.Name.AVAudioSessionInterruption,
+                                                  object: AVAudioSession.sharedInstance())
     }
     
     //*****************************************************************
@@ -126,39 +126,22 @@ class NowPlayingViewController: UIViewController {
     func setupPlayer() {
         radioPlayer.view.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         radioPlayer.view.sizeToFit()
-        radioPlayer.movieSourceType = MPMovieSourceType.Streaming
-        radioPlayer.fullscreen = false
+        radioPlayer.movieSourceType = MPMovieSourceType.streaming
+        radioPlayer.isFullscreen = false
         radioPlayer.shouldAutoplay = true
         radioPlayer.prepareToPlay()
-        radioPlayer.controlStyle = MPMovieControlStyle.None
+        radioPlayer.controlStyle = MPMovieControlStyle.none
     }
   
-    func setupVolumeSlider() {
-        // Note: This slider implementation uses a MPVolumeView
-        // The volume slider only works in devices, not the simulator.
-  
-        volumeParentView.backgroundColor = UIColor.clearColor()
-        let volumeView = MPVolumeView(frame: volumeParentView.bounds)
-        for view in volumeView.subviews {
-            let uiview: UIView = view as UIView
-             if (uiview.description as NSString).rangeOfString("MPVolumeSlider").location != NSNotFound {
-                mpVolumeSlider = (uiview as! UISlider)
-            }
-        }
-        
-        let thumbImageNormal = UIImage(named: "slider-ball")
-        slider?.setThumbImage(thumbImageNormal, forState: .Normal)
-        
-    }
     
     func stationDidChange() {
         radioPlayer.stop()
         
-        radioPlayer.contentURL = NSURL(string: currentStation.stationStreamURL)
+        radioPlayer.contentURL = NSURL(string: currentStation.stationStreamURL) as URL!
         radioPlayer.prepareToPlay()
         radioPlayer.play()
         
-        updateLabels("Irratiarekin konektatzen...")
+        updateLabels(statusMessage: "Irratiarekin konektatzen...")
         
         // songLabel animate
         songLabel.animation = "flash"
@@ -176,7 +159,7 @@ class NowPlayingViewController: UIViewController {
     
     @IBAction func playPressed() {
         track.isPlaying = true
-        playButtonEnable(false)
+        playButtonEnable(enabled: false)
         radioPlayer.play()
         updateLabels()
         
@@ -194,12 +177,8 @@ class NowPlayingViewController: UIViewController {
         playButtonEnable()
         
         radioPlayer.pause()
-        updateLabels("Station Paused...")
+        updateLabels(statusMessage: "Station Paused...")
         nowPlayingImageView.stopAnimating()
-    }
-    
-    @IBAction func volumeChanged(sender:UISlider) {
-        mpVolumeSlider.value = sender.value
     }
     
     //*****************************************************************
@@ -242,12 +221,12 @@ class NowPlayingViewController: UIViewController {
     
     func playButtonEnable(enabled: Bool = true) {
         if enabled {
-            playButton.enabled = true
-            pauseButton.enabled = false
+            playButton.isEnabled = true
+            pauseButton.isEnabled = false
             track.isPlaying = false
         } else {
-            playButton.enabled = false
-            pauseButton.enabled = true
+            playButton.isEnabled = false
+            pauseButton.isEnabled = true
             track.isPlaying = true
         }
     }
@@ -256,16 +235,16 @@ class NowPlayingViewController: UIViewController {
         
         // Setup ImageView
         nowPlayingImageView = UIImageView(image: UIImage(named: "NowPlayingBars-3"))
-        nowPlayingImageView.autoresizingMask = UIViewAutoresizing.None
-        nowPlayingImageView.contentMode = UIViewContentMode.Center
+        nowPlayingImageView.autoresizingMask = []
+        nowPlayingImageView.contentMode = UIViewContentMode.center
         
         // Create Animation
         nowPlayingImageView.animationImages = AnimationFrames.createFrames()
         nowPlayingImageView.animationDuration = 0.7
         
         // Create Top BarButton
-        let barButton = UIButton(type: UIButtonType.Custom)
-        barButton.frame = CGRectMake(0, 0, 40, 40);
+        let barButton = UIButton(type: UIButtonType.custom)
+        barButton.frame = CGRect(x: 0,y: 0,width: 40,height: 40);
         barButton.addSubview(nowPlayingImageView)
         nowPlayingImageView.center = barButton.center
         
@@ -298,7 +277,7 @@ class NowPlayingViewController: UIViewController {
             
             self.updateLockScreen()
             // Call delegate function that artwork updated
-            self.delegate?.artworkDidUpdate(self.track)
+            self.delegate?.artworkDidUpdate(track: self.track)
             
         } else {
             // No Station or LastFM art found, use default art
@@ -315,16 +294,16 @@ class NowPlayingViewController: UIViewController {
     // MARK: - Segue
     //*****************************************************************
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "InfoDetail" {
-            let infoController = segue.destinationViewController as! InfoDetailViewController
+            let infoController = segue.destination as! InfoDetailViewController
             infoController.currentStation = currentStation
         }
     }
     
     @IBAction func infoButtonPressed(sender: UIButton) {
-        performSegueWithIdentifier("InfoDetail", sender: self)
+        performSegue(withIdentifier: "InfoDetail", sender: self)
     }
     
     //*****************************************************************
@@ -336,22 +315,22 @@ class NowPlayingViewController: UIViewController {
         // Update notification/lock screen
         let albumArtwork = MPMediaItemArtwork(image: track.artworkImage!)
         
-        MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = [
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyArtist: track.artist,
             MPMediaItemPropertyTitle: track.title,
             MPMediaItemPropertyArtwork: albumArtwork
         ]
     }
     
-    override func remoteControlReceivedWithEvent(receivedEvent: UIEvent?) {
-        super.remoteControlReceivedWithEvent(receivedEvent)
+    override func remoteControlReceived(with receivedEvent: UIEvent?) {
+        super.remoteControlReceived(with: receivedEvent)
         
-        if receivedEvent!.type == UIEventType.RemoteControl {
+        if receivedEvent!.type == UIEventType.remoteControl {
             
             switch receivedEvent!.subtype {
-            case .RemoteControlPlay:
+            case .remoteControlPlay:
                 playPressed()
-            case .RemoteControlPause:
+            case .remoteControlPause:
                 pausePressed()
             default:
                 break
@@ -373,10 +352,10 @@ class NowPlayingViewController: UIViewController {
             let metaData = firstMeta.value as! String
             
             var stringParts = [String]()
-            if metaData.rangeOfString(" - ") != nil {
-                stringParts = metaData.componentsSeparatedByString(" - ")
+            if metaData.range(of: " - ") != nil {
+                stringParts = metaData.components(separatedBy: " - ")
             } else {
-                stringParts = metaData.componentsSeparatedByString("-")
+                stringParts = metaData.components(separatedBy: "-")
             }
             
             // Set artist & songvariables
@@ -393,17 +372,15 @@ class NowPlayingViewController: UIViewController {
                 track.title = currentStation.stationName
             }
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async(execute: {
                 
                 if currentSongName != self.track.title {
                     
-                    if DEBUG_LOG {
-                        print("METADATA artist: \(self.track.artist) | title: \(self.track.title)")
-                    }
                     
                     // Update Labels
                     self.artistLabel.text = self.track.artist
                     self.songLabel.text = self.track.title
+                    self.updateUserActivityState(self.userActivity!)
                     
                     // songLabel animation
                     self.songLabel.animation = "zoomIn"
@@ -412,10 +389,13 @@ class NowPlayingViewController: UIViewController {
                     self.songLabel.animate()
                     
                     // Update Stations Screen
-                    self.delegate?.songMetaDataDidUpdate(self.track)
+                    self.delegate?.songMetaDataDidUpdate(track: self.track)
+                    
+                    // Query API for album art
+                    self.resetAlbumArtwork()
+                    self.updateLockScreen()
                     
                 }
-            }
+            })
         }
-    }
-}
+    }}

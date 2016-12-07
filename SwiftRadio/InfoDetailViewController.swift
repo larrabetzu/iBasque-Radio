@@ -18,7 +18,7 @@ class InfoDetailViewController: UIViewController {
     @IBOutlet weak var websiteButton: UIButton!
     
     var currentStation: RadioStation!
-    var downloadTask: NSURLSessionDownloadTask?
+    var downloadTask: URLSessionDownloadTask?
     var website: String?
 
     //*****************************************************************
@@ -48,7 +48,7 @@ class InfoDetailViewController: UIViewController {
         stationNameLabel.text = currentStation.stationName
         stationDescLabel.text = currentStation.stationDesc
         website = currentStation.stationWebsiteURL
-        websiteButton.setTitle(website!.substringFromIndex(website!.startIndex.advancedBy(7)), forState:.Normal)
+        //websiteButton.setTitle(website!.substring(from: website!.startIndex.index(offsetBy:7)), for:.normal)
         
         // Display Station Long Desc
         if currentStation.stationLongDesc == "" {
@@ -68,10 +68,10 @@ class InfoDetailViewController: UIViewController {
         // Display Station Image/Logo
         let imageURL = currentStation.stationImageURL
         
-        if imageURL.rangeOfString("http") != nil {
+        if imageURL.range(of: "http") != nil {
             // Get station image from the web, iOS should cache the image
             if let url = NSURL(string: currentStation.stationImageURL) {
-                downloadTask = stationImageView.loadImageWithURL(url) { _ in }
+                downloadTask = stationImageView.loadImageWithURL(url: url) { _ in }
             }
             
         } else if imageURL != "" {
@@ -92,12 +92,12 @@ class InfoDetailViewController: UIViewController {
     //*****************************************************************
     
     @IBAction func okayButtonPressed(sender: UIButton) {
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func websiteButtonDidTouch(sender: UIButton) {
         if let web = website{
             if let url = NSURL(string: web) {
-                UIApplication.sharedApplication().openURL(url)
+                UIApplication.shared.openURL(url as URL)
             }
         }
     }

@@ -9,12 +9,12 @@
 import UIKit
 
 class StationTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var stationNameLabel: UILabel!
     @IBOutlet weak var stationDescLabel: UILabel!
     @IBOutlet weak var stationImageView: UIImageView!
     
-    var downloadTask: NSURLSessionDownloadTask?
+    var downloadTask: URLSessionDownloadTask?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,7 @@ class StationTableViewCell: UITableViewCell {
         selectedView.backgroundColor = UIColor(red: 78/255, green: 82/255, blue: 93/255, alpha: 0.6)
         selectedBackgroundView  = selectedView
     }
-
+    
     func configureStationCell(station: RadioStation) {
         
         // Configure the cell...
@@ -33,20 +33,20 @@ class StationTableViewCell: UITableViewCell {
         
         let imageURL = station.stationImageURL as NSString
         
-            if imageURL.containsString("http") {
+        if imageURL.contains("http") {
             
-            if let url = NSURL(string: station.stationImageURL) {
-                downloadTask = stationImageView.loadImageWithURL(url) { (image) in
+            if let url = URL(string: station.stationImageURL) {
+                downloadTask = stationImageView.loadImageWithURL(url: url as NSURL) { (image) in
                     // station image loaded
                 }
             }
-                
-            } else if imageURL != "" {
-                stationImageView.image = UIImage(named: imageURL as String)
-           
-            } else {
-                stationImageView.image = UIImage(named: "stationImage")
-            }
+            
+        } else if imageURL != "" {
+            stationImageView.image = UIImage(named: imageURL as String)
+            
+        } else {
+            stationImageView.image = UIImage(named: "stationImage")
+        }
         
         stationImageView.applyShadow()
     }
