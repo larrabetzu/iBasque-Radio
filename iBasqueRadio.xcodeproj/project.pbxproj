@@ -16,43 +16,11 @@
 			<array>
 				<string>5C53F8D2C3472250B4A58BBA</string>
 				<string>B0E304EEA30D467B2954020D</string>
-				<string>0A21E3A79C37CA01957031E3</string>
-				<string>1070C18735C794781E22B4CF</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0A21E3A79C37CA01957031E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-iBasqueRadioUITests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-iBasqueRadioUITests/Pods-iBasqueRadioUITests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1070C18735C794781E22B4CF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-iBasqueRadioUITests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-iBasqueRadioUITests/Pods-iBasqueRadioUITests.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -294,6 +262,7 @@ fi
 				<string>94DB0A9F1B98B762005ED993</string>
 				<string>94DB0A9C1B98B762005ED993</string>
 				<string>9409E1261ABF6FEA00312E2B</string>
+				<string>9F9E1E8A1DF8A5B500A2F738</string>
 			</array>
 			<key>isa</key>
 			<string>PBXResourcesBuildPhase</string>
@@ -661,7 +630,7 @@ fi
 				<key>INFOPLIST_FILE</key>
 				<string>SwiftRadio/Info.plist</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
+				<string>9.0</string>
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks</string>
 				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
@@ -704,7 +673,7 @@ fi
 				<key>INFOPLIST_FILE</key>
 				<string>SwiftRadio/Info.plist</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
+				<string>9.0</string>
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks</string>
 				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
@@ -900,6 +869,7 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
+				<string>9F9E1E891DF8A5B500A2F738</string>
 				<string>94ECF2661B94D80600D120A8</string>
 				<string>94DB0A711B98B762005ED993</string>
 			</array>
@@ -1818,6 +1788,28 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>9F9E1E891DF8A5B500A2F738</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>GoogleService-Info.plist</string>
+			<key>path</key>
+			<string>../../../../../../../../Users/gorkaercilla/Downloads/GoogleService-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F9E1E8A1DF8A5B500A2F738</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9F9E1E891DF8A5B500A2F738</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>9FACCB861C3E9DAD00567EDA</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1837,9 +1829,7 @@ fi
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array>
-				<string>F415A60FEB6AC18CBEDE901B</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -1862,11 +1852,9 @@ fi
 			<string>9FACCB931C3E9DAD00567EDA</string>
 			<key>buildPhases</key>
 			<array>
-				<string>B6F7819AC1A8AC69D9D607CB</string>
 				<string>9FACCB861C3E9DAD00567EDA</string>
 				<string>9FACCB871C3E9DAD00567EDA</string>
 				<string>9FACCB881C3E9DAD00567EDA</string>
-				<string>B6A694EAEDE41F2F0A81432C</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -1966,8 +1954,6 @@ fi
 		</dict>
 		<key>9FACCB911C3E9DAD00567EDA</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0A21E3A79C37CA01957031E3</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>DEBUG_INFORMATION_FORMAT</key>
@@ -2000,8 +1986,6 @@ fi
 		</dict>
 		<key>9FACCB921C3E9DAD00567EDA</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1070C18735C794781E22B4CF</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>DEBUG_INFORMATION_FORMAT</key>
@@ -2156,60 +2140,6 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B6A694EAEDE41F2F0A81432C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-iBasqueRadioUITests/Pods-iBasqueRadioUITests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B6F7819AC1A8AC69D9D607CB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
 		<key>B90086461BBE40AF00E5372C</key>
 		<dict>
 			<key>isa</key>
@@ -2235,13 +2165,6 @@ fi
 			<string>Pods_iBasqueRadio.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F415A60FEB6AC18CBEDE901B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B20C3F7DFE1DC9457D0CEC5C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

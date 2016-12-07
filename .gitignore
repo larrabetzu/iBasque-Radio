@@ -24,3 +24,5 @@ ApiKeys.plist
 Pods/
 
 fastlane/
+/SwiftRadio/GoogleService-Info.plist
+/.DS_Store
