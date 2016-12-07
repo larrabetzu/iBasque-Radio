@@ -363,6 +363,7 @@
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = T355TDU55C;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -625,7 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ercillagorka.iBasqueRadio;
 				PRODUCT_NAME = iBasqueRadio;
-				PROVISIONING_PROFILE = "8d36b4ee-9c78-4917-a265-67dae362de03";
+				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 3.0;
 			};
