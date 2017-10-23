@@ -57,8 +57,8 @@
 		94DB0AAC1B98B762005ED993 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB0A8F1B98B762005ED993 /* UnwindSegue.swift */; };
 		94E9761C1B1A8F3200F52B1E /* UIImage+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */; };
 		94ECF2671B94D80600D120A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */; };
+		9F7DA5111F9E447500BFBEC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DA5101F9E447500BFBEC9 /* GoogleService-Info.plist */; };
 		9F86C4221DFC204300E05DB5 /* ServiceAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F86C4211DFC204300E05DB5 /* ServiceAccount.json */; };
-		9F9E1E8A1DF8A5B500A2F738 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E1E891DF8A5B500A2F738 /* GoogleService-Info.plist */; };
 		9FACCB8D1C3E9DAD00567EDA /* iBasqueRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCB8C1C3E9DAD00567EDA /* iBasqueRadioUITests.swift */; };
 		9FACCB951C3E9E0100567EDA /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCB941C3E9E0100567EDA /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
@@ -127,8 +127,8 @@
 		94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DropShadow.swift"; sourceTree = "<group>"; };
 		94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftRadio/Libraries/SwiftyJSON.swift; sourceTree = SOURCE_ROOT; };
 		9F2E57F31BE247B10029DAE2 /* eu */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = eu; path = eu.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F7DA5101F9E447500BFBEC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SwiftRadio/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9F86C4211DFC204300E05DB5 /* ServiceAccount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ServiceAccount.json; path = SwiftRadio/ServiceAccount.json; sourceTree = SOURCE_ROOT; };
-		9F9E1E891DF8A5B500A2F738 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../Users/gorkaercilla/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FACCB8A1C3E9DAD00567EDA /* iBasqueRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBasqueRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FACCB8C1C3E9DAD00567EDA /* iBasqueRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBasqueRadioUITests.swift; sourceTree = "<group>"; };
 		9FACCB8E1C3E9DAD00567EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		949BBB411ACCA2B6005B7C26 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				9F9E1E891DF8A5B500A2F738 /* GoogleService-Info.plist */,
+				9F7DA5101F9E447500BFBEC9 /* GoogleService-Info.plist */,
 				9F86C4211DFC204300E05DB5 /* ServiceAccount.json */,
 				94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */,
 				94DB0A711B98B762005ED993 /* Spring */,
@@ -439,12 +439,12 @@
 			files = (
 				945DB3C21AD58E3A00495EBB /* stations.json in Resources */,
 				9409E1241ABF6FEA00312E2B /* Main.storyboard in Resources */,
+				9F7DA5111F9E447500BFBEC9 /* GoogleService-Info.plist in Resources */,
 				9F86C4221DFC204300E05DB5 /* ServiceAccount.json in Resources */,
 				945DB3C51AD5A6E200495EBB /* NothingFoundCell.xib in Resources */,
 				94DB0A9F1B98B762005ED993 /* LoadingView.xib in Resources */,
 				94DB0A9C1B98B762005ED993 /* Info.plist in Resources */,
 				9409E1261ABF6FEA00312E2B /* Images.xcassets in Resources */,
-				9F9E1E8A1DF8A5B500A2F738 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
