@@ -5,5 +5,6 @@ target 'iBasqueRadio' do
 
     pod 'Firebase/Core'
     pod 'Firebase/Crash'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift4'
 
 end

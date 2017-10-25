@@ -291,7 +291,7 @@
                                     <constraint firstAttribute="height" constant="180" id="hCD-tK-vVP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-ZG-rx5" userLabel="Song Label" customClass="SpringLabel" customModule="iBasqueRadio" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-ZG-rx5" userLabel="Song Label" customClass="SpringLabel" customModule="Spring">
                                 <rect key="frame" x="16" y="442" width="288" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -413,7 +413,7 @@
                         <outlet property="artistLabel" destination="v3l-q6-g0h" id="s0B-6Y-MWu"/>
                         <outlet property="pauseButton" destination="k7t-tN-2wp" id="hY6-Tz-wKV"/>
                         <outlet property="playButton" destination="D3H-co-r2v" id="7vv-MG-kTG"/>
-                        <outlet property="songLabel" destination="KC8-ZG-rx5" id="tNh-3K-qWW"/>
+                        <outlet property="songLabel" destination="KC8-ZG-rx5" id="Fhl-7T-3WW"/>
                         <segue destination="bg5-7y-kdG" kind="push" identifier="InfoDetail" id="6y5-wi-W3s"/>
                     </connections>
                 </viewController>

@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import Spring
 
 //*****************************************************************
 // Protocol
@@ -99,7 +100,7 @@ class NowPlayingViewController: UIViewController {
 
     }
     
-    func didBecomeActiveNotificationReceived() {
+    @objc func didBecomeActiveNotificationReceived() {
         // View became active
         updateLabels()
         justBecameActive = true
@@ -147,7 +148,7 @@ class NowPlayingViewController: UIViewController {
         songLabel.animation = "flash"
         songLabel.repeatCount = 2
         songLabel.animate()
-        
+ 
         resetAlbumArtwork()
         
         track.isPlaying = true

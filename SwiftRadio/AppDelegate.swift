@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Make status bar white
         UINavigationBar.appearance().barStyle = .black
-        UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 75/255, green: 16/255, blue: 24/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor = UIColor.Palette.Brand.Red
         
         
         return true
