@@ -66,7 +66,7 @@ class StationsViewController: UIViewController {
         
         // If a track is playing, display title & artist information and animation
         if currentTrack != nil && currentTrack!.isPlaying {
-            let title = currentStation!.stationName + ": " + currentTrack!.title + " - " + currentTrack!.artist + "..."
+            let title = currentStation!.name + ": " + currentTrack!.title + " - " + currentTrack!.artist + "..."
             stationNowPlayingButton.setTitle(title, for: .normal)
             nowPlayingAnimationImageView.startAnimating()
         } else {
@@ -112,14 +112,9 @@ class StationsViewController: UIViewController {
             
             if DEBUG_LOG { print("Stations JSON Found") }
             
-            let json = JSON(data: data! as Data)
-            
-            if let stationArray = json["station"].array {
+            if let jsonString = String(data: data as Data!, encoding: String.Encoding.utf8){
                 
-                for stationJSON in stationArray {
-                    let station = RadioStation.parseStation(stationJSON: stationJSON)
-                    self.stations.append(station)
-                }
+                self.stations = RadioStation.parseStations(jsonString: jsonString)
                 
                 // stations array populated, update table on main queue
                 DispatchQueue.main.async(execute: {
@@ -236,7 +231,7 @@ extension StationsViewController: UITableViewDelegate {
         if !stations.isEmpty {
             
             // Set Now Playing Buttons
-            let title = stations[indexPath.row].stationName + " - Zuzenean..."
+            let title = stations[indexPath.row].name + " - Zuzenean..."
             stationNowPlayingButton.setTitle(title, for: .normal)
             stationNowPlayingButton.isEnabled = true
             
@@ -258,7 +253,7 @@ extension StationsViewController: NowPlayingViewControllerDelegate {
     
     func songMetaDataDidUpdate(track: Track) {
         currentTrack = track
-        let title = currentStation!.stationName + ": " + currentTrack!.title + " - " + currentTrack!.artist + "..."
+        let title = currentStation!.name + ": " + currentTrack!.title + " - " + currentTrack!.artist + "..."
         stationNowPlayingButton.setTitle(title, for: .normal)
     }
 

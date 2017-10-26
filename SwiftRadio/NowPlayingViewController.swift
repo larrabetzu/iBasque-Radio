@@ -56,7 +56,7 @@ class NowPlayingViewController: UIViewController {
         optimizeForDeviceSize()
 
         // Set View Title
-        self.title = currentStation.stationName
+        self.title = currentStation.name
         
         // Create Now Playing BarItem
         createNowPlayingAnimation()
@@ -138,7 +138,7 @@ class NowPlayingViewController: UIViewController {
     func stationDidChange() {
         radioPlayer.stop()
         
-        radioPlayer.contentURL = NSURL(string: currentStation.stationStreamURL) as URL!
+        radioPlayer.contentURL = NSURL(string: currentStation.streamURL) as URL!
         radioPlayer.prepareToPlay()
         radioPlayer.play()
         
@@ -208,8 +208,8 @@ class NowPlayingViewController: UIViewController {
         
         if statusMessage != "" {
             // There's a an interruption or pause in the audio queue
-            songLabel.text = currentStation.stationDesc
-            artistLabel.text = currentStation.stationName
+            songLabel.text = currentStation.desc
+            artistLabel.text = currentStation.name
             
         } else {
             // Radio is (hopefully) streaming properly
@@ -264,7 +264,7 @@ class NowPlayingViewController: UIViewController {
     
     func resetAlbumArtwork() {
         track.artworkLoaded = false
-        track.artworkURL = currentStation.stationImageURL
+        track.artworkURL = currentStation.imageURL
         updateAlbumArtwork()
     }
     
@@ -369,8 +369,8 @@ class NowPlayingViewController: UIViewController {
             }
             
             if track.artist == "" && track.title == "" {
-                track.artist = currentStation.stationDesc
-                track.title = currentStation.stationName
+                track.artist = currentStation.desc
+                track.title = currentStation.name
             }
             
             DispatchQueue.main.async(execute: {

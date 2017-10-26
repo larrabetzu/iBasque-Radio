@@ -8,33 +8,30 @@
 
 import UIKit
 
+
 //*****************************************************************
 // Radio Station
 //*****************************************************************
-
-// Class inherits from NSObject so that you may easily add features
-// i.e. Saving favorite stations to CoreData, etc
-
-class RadioStation: NSObject {
+class RadioStation: Decodable {
     
-    var stationName     : String
-    var stationStreamURL: String
-    var stationImageURL : String
-    var stationWebsiteURL : String
-    var stationDesc     : String
-    var stationLongDesc : String
+    var name     : String
+    var streamURL: String
+    var imageURL : String
+    var websiteURL : String
+    var desc     : String
+    var longDesc : String
     
-    init(name: String, streamURL: String, imageURL: String, websiteURL: String, desc: String, longDesc: String) {
-        self.stationName       = name
-        self.stationStreamURL  = streamURL
-        self.stationImageURL   = imageURL
-        self.stationWebsiteURL = websiteURL
-        self.stationDesc       = desc
-        self.stationLongDesc   = longDesc
+    init(name: String, streamURL: String, imageURL: String, websiteURL: String, desc: String, longDesc: String){
+        self.name       = name
+        self.streamURL  = streamURL
+        self.imageURL   = imageURL
+        self.websiteURL = websiteURL
+        self.desc       = desc
+        self.longDesc   = longDesc
     }
     
     // Convenience init without longDesc
-    convenience init(name: String, streamURL: String, imageURL: String, websiteURL: String, desc: String) {
+    convenience init(name: String, streamURL: String, imageURL: String, websiteURL: String, desc: String){
         self.init(name: name, streamURL: streamURL, imageURL: imageURL, websiteURL: websiteURL,desc: desc, longDesc: "")
     }
     
@@ -42,17 +39,12 @@ class RadioStation: NSObject {
     // MARK: - JSON Parsing into object
     //*****************************************************************
     
-    class func parseStation(stationJSON: JSON) -> (RadioStation) {
+    class func parseStations(jsonString: String) -> [RadioStation] {
+        let jsonData = jsonString.data(using: .utf8)!
+        let decoder = JSONDecoder()
+        let radioStation = try! decoder.decode([RadioStation].self, from: jsonData)
         
-        let name        = stationJSON["name"].string ?? ""
-        let streamURL   = stationJSON["streamURL"].string ?? ""
-        let imageURL    = stationJSON["imageURL"].string ?? ""
-        let websiteURL  = stationJSON["websiteURL"].string ?? ""
-        let desc        = stationJSON["desc"].string ?? ""
-        let longDesc    = stationJSON["longDesc"].string ?? ""
-        
-        let station = RadioStation(name: name, streamURL: streamURL, imageURL: imageURL, websiteURL: websiteURL, desc: desc, longDesc: longDesc)
-        return station
+        return radioStation
     }
 
 }

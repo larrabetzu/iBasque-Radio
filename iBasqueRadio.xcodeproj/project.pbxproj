@@ -27,7 +27,6 @@
 		94D260981B45E8B800DE671C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D260971B45E8B800DE671C /* Track.swift */; };
 		94D30EA71AD07A880024FE96 /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D30EA61AD07A880024FE96 /* StationTableViewCell.swift */; };
 		94E9761C1B1A8F3200F52B1E /* UIImage+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */; };
-		94ECF2671B94D80600D120A8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */; };
 		9F7DA5111F9E447500BFBEC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7DA5101F9E447500BFBEC9 /* GoogleService-Info.plist */; };
 		9F86C4221DFC204300E05DB5 /* ServiceAccount.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F86C4211DFC204300E05DB5 /* ServiceAccount.json */; };
 		9F9BC9321FA0A63300FE17F8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9BC9311FA0A63300FE17F8 /* Color.swift */; };
@@ -68,7 +67,6 @@
 		94D260971B45E8B800DE671C /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		94D30EA61AD07A880024FE96 /* StationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		94E9761B1B1A8F3200F52B1E /* UIImage+DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DropShadow.swift"; sourceTree = "<group>"; };
-		94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftRadio/Libraries/SwiftyJSON.swift; sourceTree = SOURCE_ROOT; };
 		9F2E57F31BE247B10029DAE2 /* eu */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = eu; path = eu.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F7DA5101F9E447500BFBEC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "SwiftRadio/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9F86C4211DFC204300E05DB5 /* ServiceAccount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ServiceAccount.json; path = SwiftRadio/ServiceAccount.json; sourceTree = SOURCE_ROOT; };
@@ -174,7 +172,6 @@
 			children = (
 				9F7DA5101F9E447500BFBEC9 /* GoogleService-Info.plist */,
 				9F86C4211DFC204300E05DB5 /* ServiceAccount.json */,
-				94ECF2661B94D80600D120A8 /* SwiftyJSON.swift */,
 			);
 			name = Libraries;
 			path = RadioPro;
@@ -463,7 +460,6 @@
 				94D260981B45E8B800DE671C /* Track.swift in Sources */,
 				94452E4F1AD6F24700BFE7A5 /* PopUpMenuViewController.swift in Sources */,
 				9409E11C1ABF6FEA00312E2B /* AppDelegate.swift in Sources */,
-				94ECF2671B94D80600D120A8 /* SwiftyJSON.swift in Sources */,
 				94D260961B45E3FA00DE671C /* AnimationFrames.swift in Sources */,
 				942A3F371AE43DF80011396E /* StationsViewController.swift in Sources */,
 				94AC70AE1AD05C6200652982 /* RadioStation.swift in Sources */,
