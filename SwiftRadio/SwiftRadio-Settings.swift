@@ -24,3 +24,6 @@ let DEBUG_LOG = false
 
 let useLocalStations = true
 let stationDataURL   = "http://yoururl.com/json/stations.json"
+let SupportEmail = "ercillagorka@gmail.com"
+let SupportEmailSubject = "From iBasqueRadio App"
+let SupportWebsite = "https://github.com/larrabetzu/iBasque-Radio/"

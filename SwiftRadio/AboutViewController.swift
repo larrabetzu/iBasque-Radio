@@ -26,8 +26,8 @@ class AboutViewController: UIViewController {
     @IBAction func emailButtonDidTouch(sender: UIButton) {
         
         // Use your own email address & subject
-        let receipients = ["ercillagorka@gmail.com"]
-        let subject = "From iBasqueRadio App"
+        let receipients = [SupportEmail]
+        let subject = SupportEmailSubject
         let messageBody = ""
         
         let configuredMailComposeViewController = configureMailComposeViewController(recepients: receipients, subject: subject, messageBody: messageBody)
