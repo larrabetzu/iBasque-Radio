@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  iBasqueRadio
+
+  Created by Gorka Ercilla on 27/10/17.
+  Copyright © 2017 Gorka Ercilla. All rights reserved.
+*/
+
+
+//MARK: - AboutScreen
+"AboutScreen ErrorAlertTitle" = "Ezin izen da emailik bidali";
+"AboutScreen ErrorAlertDescription" = "Zure gailuak ezin deu emailik bidali. Mesedez egiaztatu email konfigurazioa ondo dagoela eta saiatu berriro.";
+"AboutScreen ErrorAlertAcceptAction" = "OK";
+
+
+//MARK: - NowPlayingScreen
+"NowPlayingScreen ConnectingRadio" = "Irratiarekin konektatzen...";
+
+//MARK: - StationScreen
+"StationScreen Title" = "iBasque Radio";
+"StationScreen Live"  = "%@ - Zuzenean...";
+"StationScreen LiveMetaData" = "%@: %@ - %@...";

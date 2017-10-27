@@ -57,16 +57,18 @@ class StationsViewController: UIViewController {
             success = false
         }
         if !success {
-            if DEBUG_LOG { print("Failed to set audio session category.  Error: \(error)") }
+            if DEBUG_LOG { print("Failed to set audio session category.  Error: \(error.debugDescription)") }
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "iBasque Radio"
+        self.title = String.StationScreen.Title.localized
         
         // If a track is playing, display title & artist information and animation
         if currentTrack != nil && currentTrack!.isPlaying {
-            let title = currentStation!.name + ": " + currentTrack!.title + " - " + currentTrack!.artist + "..."
+            let title = String.StationScreen.LiveMetaData.localized(with: currentStation!.name,
+                                                                    currentTrack!.title,
+                                                                    currentTrack!.artist)
             stationNowPlayingButton.setTitle(title, for: .normal)
             nowPlayingAnimationImageView.startAnimating()
         } else {
@@ -231,7 +233,7 @@ extension StationsViewController: UITableViewDelegate {
         if !stations.isEmpty {
             
             // Set Now Playing Buttons
-            let title = stations[indexPath.row].name + " - Zuzenean..."
+            let title = String.StationScreen.Live.localized(with: stations[indexPath.row].name)
             stationNowPlayingButton.setTitle(title, for: .normal)
             stationNowPlayingButton.isEnabled = true
             
@@ -253,7 +255,9 @@ extension StationsViewController: NowPlayingViewControllerDelegate {
     
     func songMetaDataDidUpdate(track: Track) {
         currentTrack = track
-        let title = currentStation!.name + ": " + currentTrack!.title + " - " + currentTrack!.artist + "..."
+        let title = String.StationScreen.LiveMetaData.localized(with: currentStation!.name,
+                                                                currentTrack!.title,
+                                                                currentTrack!.artist)
         stationNowPlayingButton.setTitle(title, for: .normal)
     }
 

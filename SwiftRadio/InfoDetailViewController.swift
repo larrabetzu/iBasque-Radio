@@ -51,17 +51,11 @@ class InfoDetailViewController: UIViewController {
         //websiteButton.setTitle(website!.substring(from: website!.startIndex.index(offsetBy:7)), for:.normal)
         
         // Display Station Long Desc
-        if currentStation.longDesc == "" {
-            loadDefaultText()
-        } else {
-            stationLongDescTextView.text = currentStation.longDesc
-        }
+        stationLongDescTextView.text = currentStation.longDesc
+
     }
     
-    func loadDefaultText() {
-        // Add your own default ext
-        stationLongDescTextView.text = "You are listening to Swift Radio. This is a sweet open source project. Tell your friends, swiftly!"
-    }
+
     
     func setupStationLogo() {
         

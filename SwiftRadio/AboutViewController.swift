@@ -70,8 +70,11 @@ extension AboutViewController: MFMailComposeViewControllerDelegate {
     
     func showSendMailErrorAlert() {
         
-        let alert = UIAlertController(title: "Ezin izen da emailik bidali", message: "Zure gailuak ezin deu emailik bidali. Mesedez egiaztatu email konfigurazioa ondo dagoela eta saiatu berriro.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let alert = UIAlertController(title: String.AboutScreen.ErrorAlertTitle.localized,
+                                      message: String.AboutScreen.ErrorAlertDescription.localized,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String.AboutScreen.ErrorAlertAcceptAction.localized,
+                                      style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }

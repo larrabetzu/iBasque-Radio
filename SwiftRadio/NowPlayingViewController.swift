@@ -142,7 +142,7 @@ class NowPlayingViewController: UIViewController {
         radioPlayer.prepareToPlay()
         radioPlayer.play()
         
-        updateLabels(statusMessage: "Irratiarekin konektatzen...")
+        updateLabels(statusMessage: String.NowPlayingScreen.ConnectingRadio.localized)
         
         // songLabel animate
         songLabel.animation = "flash"

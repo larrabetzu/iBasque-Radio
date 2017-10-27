@@ -33,6 +33,8 @@
 		9F9BC9331FA0A63300FE17F8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9BC9311FA0A63300FE17F8 /* Color.swift */; };
 		9FACCB8D1C3E9DAD00567EDA /* iBasqueRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCB8C1C3E9DAD00567EDA /* iBasqueRadioUITests.swift */; };
 		9FACCB951C3E9E0100567EDA /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCB941C3E9E0100567EDA /* SnapshotHelper.swift */; };
+		9FD1E79D1FA340D300A024BB /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD1E79C1FA340D300A024BB /* Localizable.swift */; };
+		9FD1E79F1FA343BF00A024BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1E79E1FA343BF00A024BB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		9FACCB8C1C3E9DAD00567EDA /* iBasqueRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBasqueRadioUITests.swift; sourceTree = "<group>"; };
 		9FACCB8E1C3E9DAD00567EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FACCB941C3E9E0100567EDA /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		9FD1E79C1FA340D300A024BB /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		9FD1E79E1FA343BF00A024BB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B0E304EEA30D467B2954020D /* Pods-iBasqueRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBasqueRadio.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBasqueRadio/Pods-iBasqueRadio.release.xcconfig"; sourceTree = "<group>"; };
 		B20C3F7DFE1DC9457D0CEC5C /* Pods_iBasqueRadioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iBasqueRadioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90086461BBE40AF00E5372C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -229,6 +233,7 @@
 		9F9BC92F1FA0A60600FE17F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9FD1E79B1FA3408800A024BB /* Localizable */,
 				9F9BC9301FA0A61A00FE17F8 /* Color */,
 			);
 			name = Resources;
@@ -250,6 +255,15 @@
 				9FACCB8E1C3E9DAD00567EDA /* Info.plist */,
 			);
 			path = iBasqueRadioUITests;
+			sourceTree = "<group>";
+		};
+		9FD1E79B1FA3408800A024BB /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				9FD1E79C1FA340D300A024BB /* Localizable.swift */,
+				9FD1E79E1FA343BF00A024BB /* Localizable.strings */,
+			);
+			name = Localizable;
 			sourceTree = "<group>";
 		};
 		B5F92A644444FFAFA6125061 /* Frameworks */ = {
@@ -359,6 +373,7 @@
 				945DB3C21AD58E3A00495EBB /* stations.json in Resources */,
 				9409E1241ABF6FEA00312E2B /* Main.storyboard in Resources */,
 				9F7DA5111F9E447500BFBEC9 /* GoogleService-Info.plist in Resources */,
+				9FD1E79F1FA343BF00A024BB /* Localizable.strings in Resources */,
 				9F86C4221DFC204300E05DB5 /* ServiceAccount.json in Resources */,
 				945DB3C51AD5A6E200495EBB /* NothingFoundCell.xib in Resources */,
 				9409E1261ABF6FEA00312E2B /* Images.xcassets in Resources */,
@@ -453,6 +468,7 @@
 				94D30EA71AD07A880024FE96 /* StationTableViewCell.swift in Sources */,
 				9F9BC9321FA0A63300FE17F8 /* Color.swift in Sources */,
 				9409E1401ABF78B000312E2B /* NowPlayingViewController.swift in Sources */,
+				9FD1E79D1FA340D300A024BB /* Localizable.swift in Sources */,
 				94D1D0A51AD6D6230022CA11 /* InfoDetailViewController.swift in Sources */,
 				949BBB401ACC9DEE005B7C26 /* DataManager.swift in Sources */,
 				94E9761C1B1A8F3200F52B1E /* UIImage+DropShadow.swift in Sources */,
