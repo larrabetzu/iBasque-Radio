@@ -111,7 +111,12 @@ class StationsViewController: UIViewController {
         
         // Get the Radio Stations
         DataManager.getStationDataWithSuccess() { (data) in
-            
+
+            // Turn off network indicator in status bar
+            defer {
+                DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
+            }
+
             if DEBUG_LOG { print("Stations JSON Found") }
             
             if let jsonString = String(data: data as Data!, encoding: String.Encoding.utf8){
@@ -127,9 +132,8 @@ class StationsViewController: UIViewController {
             } else {
                 if DEBUG_LOG { print("JSON Station Loading Error") }
             }
-            
-            // Turn off network indicator in status bar
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+
+
         }
     }
     
