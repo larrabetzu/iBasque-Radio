@@ -9,6 +9,7 @@
 import UIKit
 import MediaPlayer
 import Spring
+import StoreKit
 
 //*****************************************************************
 // Protocol
@@ -96,8 +97,8 @@ class NowPlayingViewController: UIViewController {
                 nowPlayingImageView.startAnimating()
             }
         }
-        
 
+        showRateViewIfNeeds()
     }
     
     @objc func didBecomeActiveNotificationReceived() {
@@ -153,7 +154,15 @@ class NowPlayingViewController: UIViewController {
         
         track.isPlaying = true
     }
-    
+
+    func showRateViewIfNeeds(){
+        let appVersionRated = UserDefaults.standard.object(forKey: "appVersionRated") as? String ?? "1.0.0"
+        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, appVersionRated != appVersion{
+            SKStoreReviewController.requestReview()
+            UserDefaults.standard.set(appVersion, forKey: "appVersionRated")
+        }
+    }
+
     //*****************************************************************
     // MARK: - Player Controls (Play/Pause/Volume)
     //*****************************************************************
