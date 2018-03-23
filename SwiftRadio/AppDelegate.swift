@@ -16,13 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        FIRApp.configure()
+        FirebaseApp.configure()
         
         UIApplication.shared.beginReceivingRemoteControlEvents()
         
         UINavigationBar.appearance().barStyle = .black
         UINavigationBar.appearance().barTintColor = UIColor.Palette.Brand.Red
-        
         
         return true
     }
