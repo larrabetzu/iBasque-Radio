@@ -139,7 +139,7 @@ class NowPlayingViewController: UIViewController {
     func stationDidChange() {
         radioPlayer.stop()
         
-        radioPlayer.contentURL = NSURL(string: currentStation.streamURL) as URL!
+        radioPlayer.contentURL = URL(string: currentStation.streamURL)
         radioPlayer.prepareToPlay()
         radioPlayer.play()
         

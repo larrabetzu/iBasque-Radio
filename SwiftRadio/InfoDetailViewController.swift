@@ -90,8 +90,8 @@ class InfoDetailViewController: UIViewController {
     }
     @IBAction func websiteButtonDidTouch(sender: UIButton) {
         if let web = website{
-            if let url = NSURL(string: web) {
-                UIApplication.shared.openURL(url as URL)
+            if let url = URL(string: web) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }
     }
