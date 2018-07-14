@@ -9,5 +9,6 @@ target 'iBasqueRadio' do
     pod 'Fabric', '~> 1.7.2'
     pod 'Crashlytics', '~> 3.9.3'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+    pod 'FRadioPlayer'
 
 end

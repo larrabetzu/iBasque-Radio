@@ -23,7 +23,14 @@ ApiKeys.plist
 # CocoaPods
 Pods/
 
-fastlane/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
 /SwiftRadio/GoogleService-Info.plist
 /.DS_Store
 /SwiftRadio/ServiceAccount.json
+/S7QTR9UVNT.cer
+/AdHoc_net.ercillagorka.iBasqueRadio.mobileprovision
+/fastlane/screenshots/screenshots.html

@@ -1,0 +1,5 @@
++ Euskal Herriko irrati libre eta euskaldunak zuzenean entzuteko aplikazioa. 
++ Software librearekin garatutako tresna, sarean eskaintzen duguna.
++ Etengabeko hobekuntza eta garapenean jarraitzen dugu.
++ Irrati gehiago gehituko ditugu apurka apurka.
++ Irratiak mugikorretan ere entzun daitezkelako.

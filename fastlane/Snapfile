@@ -1,0 +1,19 @@
+devices([
+  "iPhone 6",
+  "iPhone 6 Plus",
+  "iPhone 5",
+  "iPhone 4s"
+])
+
+languages([
+  "eu"
+])
+
+reinstall_app true
+clear_previous_screenshots true
+skip_open_summary true
+
+scheme "iBasqueRadio"
+output_directory "./fastlane/screenshots"
+project "./iBasqueRadio.xcodeproj"
+
